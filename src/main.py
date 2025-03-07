@@ -5,7 +5,7 @@ N = 6
 signs = ['+', '-', '*', '/']
 
 def main():
-    with open('results.txt', 'w') as fout:
+    with open('result.txt', 'w') as fout:
         fout.write("2359280" + '\n')
 
         for i in range (N):
@@ -26,9 +26,9 @@ def result(numbers, operators, fout):
     print(expression, end = "")
     res = eval(expression)
     if isinstance(res, int):
-       output = f"={res}"
+       output = f"{expression}={res}"
     else:
-        output = f"={res:.2f}"
+        output = f"{expression}={res:.2f}"
     
     print(output)
     fout.write(output + '\n')
